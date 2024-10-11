@@ -1,13 +1,74 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34; /* Dark background for contrast */
+  color: white; /* White text color */
+  font-family: 'Arial', sans-serif; /* Font style */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styles for the clock */
+.clock {
+  position: relative;
+  width: 300px; /* Width of the clock */
+  height: 300px; /* Height of the clock */
+  border: 10px solid #61dafb; /* Clock border color */
+  border-radius: 50%; /* Make it circular */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect for depth */
+  background-color: #2c3e50; /* Darker background for the clock */
 }
+
+/* Hand styles */
+.hour-hand, .min-hand, .sec-hand {
+  position: absolute;
+  background-color: #61dafb; /* Hand color */
+  border-radius: 5px; /* Rounded ends */
+  transform-origin: bottom; /* Rotate from the bottom */
+  bottom: 50%; /* Position from the bottom */
+}
+
+/* Specific styles for the hour, minute, and second hands */
+.hour-hand {
+  height: 50px; /* Length of the hour hand */
+  width: 6px; /* Width of the hour hand */
+  background-color: #f39c12; /* Hour hand color */
+}
+
+.min-hand {
+  height: 70px; /* Length of the minute hand */
+  width: 4px; /* Width of the minute hand */
+  background-color: #2980b9; /* Minute hand color */
+}
+
+.sec-hand {
+  height: 90px; /* Length of the second hand */
+  width: 2px; /* Width of the second hand */
+  background-color: #e74c3c; /* Second hand color */
+}
+
+/* Positioning for clock numbers */
+.clock span {
+  position: absolute;
+  color: white; /* Color for clock numbers */
+  font-size: 20px; /* Font size for clock numbers */
+  transform: translate(-50%, -50%); /* Center the numbers */
+}
+
+/* Positioning the clock numbers in a circular layout */
+.one { top: 10%; left: 50%; } /* 12 o'clock */
+.two { top: 25%; left: 80%; } /* 1 o'clock */
+.three { top: 50%; left: 90%; } /* 2 o'clock */
+.four { top: 75%; left: 80%; } /* 3 o'clock */
+.five { top: 85%; left: 50%; } /* 4 o'clock */
+.six { top: 75%; left: 20%; } /* 5 o'clock */
+.seven { top: 50%; left: 10%; } /* 6 o'clock */
+.eight { top: 25%; left: 20%; } /* 7 o'clock */
+.nine { top: 10%; left: 50%; } /* 8 o'clock */
+.ten { top: 15%; left: 70%; } /* 9 o'clock */
+.eleven { top: 5%; left: 30%; } /* 10 o'clock */
+.twelve { top: 5%; left: 50%; } /* 11 o'clock */
